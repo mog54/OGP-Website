@@ -19,4 +19,4 @@ chown -R www-data:www-data /var/www/html/
 service apache2 restart
 
 echo "http://$IP"
-echo "rm install.php && chmod 0644 /var/www/html/includes/config.inc.php"
+echo "rm /var/www/html/install.php && chmod 0644 /var/www/html/includes/config.inc.php"
