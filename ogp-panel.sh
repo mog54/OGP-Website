@@ -16,6 +16,7 @@ rootpasswd=root
 mysql_password=panel
 mysql -u root -p$rootpasswd -e "CREATE DATABASE panel; CREATE USER 'panel'@'localhost' IDENTIFIED BY '$mysql_password'; GRANT ALL PRIVILEGES ON panel.* TO 'panel'@'localhost'; FLUSH PRIVILEGES;"
 chown -R www-data:www-data /var/www/html/
+echo "upload_max_filzsize = 20M" >> /etc/php5/apache2/php5.ini
 service apache2 restart
 
 echo "http://$IP"
